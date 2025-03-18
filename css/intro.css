@@ -1,0 +1,123 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 5, 29, 1) 0%, rgba(0, 8, 44, 1) 50%, rgba(0, 16, 87, 1) 100%);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gaya Tampilan Intro */
+
+
+.intro {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro h1 {
+    font-size: 6em;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro h2 span {
+    background: linear-gradient(to right, #066aff, #01f7ff );
+    -webkit-background-clip: text; /* Untuk browser berbasis WebKit seperti Chrome dan Safari */
+    background-clip: text; /* Untuk browser lainnya yang mendukung */
+    color: transparent;
+    font-size: 4em; /* Ukuran diperbesar */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Efek Animasi Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek Ikon */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons span {
+    font-size: 2em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icons span:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 758px) {
+    html{
+        font-size: 62.5%;
+    }
+    .intro h1 {
+        font-size: 4em;
+    }
+
+    .intro h2 span {
+        font-size: 3em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .icons span {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .intro h1 {
+        font-size: 3em;
+    }
+
+    .intro h2 span {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 0.8em;
+    }
+
+    .icons span {
+        font-size: 1.2em;
+    }
+}
